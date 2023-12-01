@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const subheading = document.createElement("div");
     
     // Set the text content and styles for the subheading
+    subheading.style.fontFamily = "monospace";
     subheading.textContent = "SpaceForm is a student organization at UC Berkeley that aims to advance the frontiers of materials and structures in the aerospace world, a domain that will play a critical role in commercial space over the next decade. With a dedicated team of undergraduates, UC Berkeley faculty, and cutting-edge projects at the forefront of materials science and aerospace engineering, SpaceForm’s goal is to help lay the groundwork for the next hundred years of space innovation.";
     subheading.style.position = "absolute";
     subheading.style.top = "75%"; // Adjust top positioning as needed
