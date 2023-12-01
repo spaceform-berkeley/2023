@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box
+}
+
+.image-slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+img {
+  width: 100%
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+html{
+    font-family: monospace;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 9px;
+    background-color: #C3C3C3;
+    
+} 
+
+#logo-container {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    z-index: 2; /* Set a higher z-index value to place the logo on top */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#logo-container img {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2; /* Set a higher z-index value to place the menu on top */
+    background-color: #333; /* Background color of the menu */
+    padding: 10px; /* Add padding for spacing */
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline; /* Display menu items horizontally */
+    margin-right: 20px; /* Adjust the spacing between items */
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff; /* Text color of menu items */
+}
