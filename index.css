@@ -1,4 +1,87 @@
-@font-face {
+html{
+    font-family: monospace;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+#main{
+    padding: 30px;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    color: white;
+    letter-spacing: .06rem;
+}
+
+/* In your CSS file or in a <style> element in your HTML */
+#logo-container {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    z-index: 2; /* Set a higher z-index value to place the logo on top */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#logo-container img {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2; /* Set a higher z-index value to place the menu on top */
+    background-color: #333; /* Background color of the menu */
+    padding: 10px; /* Add padding for spacing */
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline; /* Display menu items horizontally */
+    margin-right: 20px; /* Adjust the spacing between items */
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff; /* Text color of menu items */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @font-face {
   font-family: SpaceFormFont;
   src: url(font.ttf);
 }
@@ -267,3 +350,4 @@ body {
     opacity: 0;
   }
 }
+ */
