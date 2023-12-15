@@ -1,0 +1,269 @@
+@font-face {
+  font-family: SpaceFormFont;
+  src: url(font.ttf);
+}
+
+@keyframes logoScale {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2); /* Adjust the scale factor */
+  }
+}
+
+@keyframes logoScroll {
+  to {
+    transform: translate(-50%, -50%) translateY(20px); /* Adjust the amount of vertical movement */
+  }
+}
+
+body {
+  font-family: "SpaceFormFont"
+}
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .logo-overlay {
+    width: 100%;
+    height: auto;
+  }
+  /* .border-top {
+    height: 10px;
+  } */
+  .border-container {
+    height: 30px; /* Adjust the height of the colored border for smaller screens */
+  }
+  .content-container {
+    padding: 10px; /* Adjust the spacing for the content on smaller screens */
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust the gap for small screens */
+  }
+
+  
+  .nav-link {
+    margin: 5px 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 10;
+  }
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Asset 1@3x.png') center/cover no-repeat;
+}
+.background-image-projects{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Asset 2@3x.png') center/cover no-repeat;
+}
+
+
+.logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust the size of the logo overlay */
+  height: auto;
+  z-index: 1;
+  animation: logoScale 2s infinite, logoScroll 4s infinite alternate;
+}
+
+.colorful-section {
+  background-color: beige;
+  position: relative;
+  padding-top: 40px; /* Adjust the spacing at the top of the section */
+  overflow: hidden;
+}
+
+.border-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust the height of the colored border */
+  display: flex;
+}
+
+.border-container-bottom {
+  position: absolute;
+  bottom: 0vmin;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust the height of the colored border */
+  display: flex;
+}
+
+.border-color {
+  flex: 1;
+  height: 100%;
+}
+
+.navbar {
+  background-color: beige; /* Background color for the navbar */
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center; 
+  gap: 10%;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  transition: background-color 0.3s;
+  font-weight: bolder;
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover color for the links */
+}
+.nav-link:not(:last-child) {
+  margin-right: 100px; /* Adjust the spacing as needed */
+}
+
+
+
+.color1 {
+  background-color: #cc6b49; /* You can choose your own colors */
+  color:#cc6b49;
+}
+
+.color2 {
+  background-color: #73bda8;
+  color: #73bda8;
+}
+
+.color3 {
+  background-color: #d2a24c;
+  color: #d2a24c;
+}
+
+.color4 {
+  background-color: #742334;
+  color: #742334;
+}
+
+.color1T {  /* You can choose your own colors */
+  color:#cc6b49;
+}
+
+.color2T {
+  color: #73bda8;
+}
+
+.color3T {
+  color: #d2a24c;
+}
+
+.color4T {
+  color: #742334;
+}
+
+.content-container {
+  padding: 20px; /* Adjust the spacing for the content */
+}
+
+.navBarImage {
+  height: 70%;
+  width: 100%;
+}
+
+
+
+
+.mission-section {
+  background-color: #333333; /* Gray background color */
+  padding: 50px; /* Adjust the padding as needed */
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+}
+
+/* Style the mission title */
+.mission-title {
+  font-size: 2rem; /* Larger font size */
+  margin-bottom: 20px; /* Add some space between the title and paragraph */
+}
+
+/* Style the mission paragraph */
+.mission-paragraph {
+  font-size: 1.2rem; /* Smaller font size */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  top: 90%;
+  border: 2px solid rgb(255, 255, 255);
+  position: absolute;
+  left: 48.5%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
